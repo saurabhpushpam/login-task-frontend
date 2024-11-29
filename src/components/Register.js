@@ -33,12 +33,12 @@ const Register = () => {
 
       if (response.status === 200) {
 
-        localStorage.setItem("user", JSON.stringify(response.data.data));
+
         toast.success("Registration successful!");
         setFormData({ name: "", dob: "", email: "", password: "" });
 
 
-        navigate("/dashboard");
+        navigate("/login");
       } else {
         toast.error(` ${response.data.msg}`);
         setFormData({ name: "", dob: "", email: "", password: "" });
